@@ -1,0 +1,33 @@
+
+
+/* navbar */
+
+.s-btn{
+    background-color: #FEBD69;
+    border-top-left-radius: 0px;
+    border-bottom-left-radius: 0px;
+    
+}
+
+.s-btn:hover{
+    background-color: #F3A847;
+}
+
+.dropdown{
+    border: 1px solid black;
+    border-radius: 5px;
+    background-color: rgb(175, 173, 173);
+}
+
+.s-input{
+    width: 500px;
+}
+
+.nav-link{
+    color: aliceblue;
+    font-size: 1.2rem;
+}
+
+.w100{
+    width: 100%;
+}
