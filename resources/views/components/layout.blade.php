@@ -15,7 +15,11 @@
 
     <x-navbar />
 
-    {{$slot}}
+    <div class="content">
+        {{$slot}}
+    </div>
     
+
+    <x-footer />
 </body>
 </html>

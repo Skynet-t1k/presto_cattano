@@ -1,5 +1,5 @@
 @if (!Route::is('register') && !Route::is('login'))
-<nav class="navbar navbar-expand-lg bg-secondary">
+<nav class="navbar navbar-expand-lg bg-navbar">
   <div class="container-fluid">
     <a class="navbar-brand" href="/"><img src="/img/prestologo.png" class="shadow" alt="presto logo" width="120" height="60"></a>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -7,9 +7,6 @@
     </button>
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <ul class="navbar-nav mb-2 mb-lg-0 d-flex justify-content-around w100">
-        <li class="nav-item">
-          <a class="nav-link" aria-current="page" href="/">Home</a>
-        </li>
         <li class="nav-item">
           <a class="nav-link" aria-current="page" href="{{route('article.create')}}">Aggiungi articolo</a>
         </li>
@@ -60,9 +57,16 @@
             <form id="logout-form" method="post" action="{{route('logout')}}">@csrf</form>
             @endauth
           </ul>
-        
-        
-        
+          @auth
+            @if (Auth::user()->is_revisor)
+              <li class="nav-item">
+                <a href="{{route('revisor.index')}}" class="nav-link btn btn-outline-success btn-sm position-relative w-sm-25">
+                  Area revisore
+                  <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">{{\App\Models\Article::toBeRevisedCount()}}</span>                  
+                </a>
+              </li>
+            @endif
+          @endauth
       </ul>
     </div>
   </div>
