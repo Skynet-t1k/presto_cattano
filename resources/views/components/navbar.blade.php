@@ -26,8 +26,8 @@
               @endif
             @endforeach
           </ul>
-          <form class="d-flex p-0 s-input" role="search">
-            <input class="form-control rounded-0 border-0" type="search" placeholder="Search" aria-label="Search">
+          <form class="d-flex p-0 s-input" role="search" action="{{ route('article.search') }}" method="GET">
+            <input class="form-control rounded-0 border-0" type="search" name="query" placeholder="Search" aria-label="Search">
             <button class="btn s-btn border-0" type="submit"><i class="fa-solid fa-magnifying-glass" style="color: #000000;"></i></button>
           </form>
         </li>

@@ -19,6 +19,8 @@ Route::get('/show/article/{article}', [ArticleController::class, 'show'])->name(
 
 Route::get('/category/{category}', [ArticleController::class, 'byCategory'])->name('byCategory');
 
+Route::get('/search/article', [PublicController::class, 'searchArticles'])->name('article.search');
+
 // Revisor
 
 Route::get('revisor/index', [RevisorController::class, 'index'])->middleware('isRevisor')->name('revisor.index');
