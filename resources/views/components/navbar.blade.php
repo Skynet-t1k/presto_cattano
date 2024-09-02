@@ -16,11 +16,11 @@
         
         <li class="nav-item dropdown d-flex">
           <a class="nav-link dropdown-toggle border rounded-0 border-0" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-            Categorie
+            {{__('ui.category')}}
           </a>
           <ul class="dropdown-menu p-0 rounded-0 border-0">
             @foreach($categories as $category)
-                  <li><a class="dropdown-item text-capitalize" href=" {{route('byCategory', ['category' => $category])}}">{{$category->name}}</a></li>
+                  <li><a class="dropdown-item text-capitalize" href=" {{route('byCategory', ['category' => $category])}}">{{__("ui.$category->name")}}</a></li>
               @if (!$loop->last)
                   <hr class="dropdown-divider">                
               @endif
@@ -39,14 +39,14 @@
               @auth 
               {{ Auth::user()->name }}
               @else
-              ospite 
+              {{__('ui.guest')}} 
               @endauth
             </span><i class="ms-2 fa-solid fa-right-to-bracket"></i>
           </a>
             <ul class="dropdown-menu">
             @guest
-            <li><a class="dropdown-item" href="{{route('login')}}">Accedi</a></li>
-            <li><a class="dropdown-item" href="{{route('register')}}">Registrati</a></li>
+            <li><a class="dropdown-item" href="{{route('login')}}">{{__('ui.login')}}</a></li>
+            <li><a class="dropdown-item" href="{{route('register')}}">{{__('ui.register')}}</a></li>
             @endguest
             @auth
             <li><a class="dropdown-item" href="#"
@@ -68,7 +68,7 @@
             @if (Auth::user()->is_revisor)
               <li class="nav-item">
                 <a href="{{route('revisor.index')}}" class="nav-link btn btn-outline-success btn-sm position-relative w-sm-25">
-                  Area revisore
+                  {{__('ui.revarea')}} 
                   <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">{{\App\Models\Article::toBeRevisedCount()}}</span>                  
                 </a>
               </li>
