@@ -8,10 +8,10 @@
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <ul class="navbar-nav mb-2 mb-lg-0 d-flex justify-content-around w100">
         <li class="nav-item">
-          <a class="nav-link" aria-current="page" href="{{route('article.create')}}">Aggiungi articolo</a>
+          <a class="nav-link" aria-current="page" href="{{route('article.create')}}">{{__('ui.addArticle')}}</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" aria-current="page" href="{{route('article.index')}}">Tutti gli articoli</a>
+          <a class="nav-link" aria-current="page" href="{{route('article.index')}}">{{__('ui.allArticles')}}</a>
         </li>
         
         <li class="nav-item dropdown d-flex">
@@ -31,11 +31,11 @@
             <button class="btn s-btn border-0" type="submit"><i class="fa-solid fa-magnifying-glass" style="color: #000000;"></i></button>
           </form>
         </li>
+
         <li class="nav-item dropdown">
-        
           <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
             <span>
-              Ciao, 
+              {{__('ui.hello')}} 
               @auth 
               {{ Auth::user()->name }}
               @else
@@ -43,8 +43,7 @@
               @endauth
             </span><i class="ms-2 fa-solid fa-right-to-bracket"></i>
           </a>
-        
-          <ul class="dropdown-menu">
+            <ul class="dropdown-menu">
             @guest
             <li><a class="dropdown-item" href="{{route('login')}}">Accedi</a></li>
             <li><a class="dropdown-item" href="{{route('register')}}">Registrati</a></li>
@@ -57,6 +56,14 @@
             <form id="logout-form" method="post" action="{{route('logout')}}">@csrf</form>
             @endauth
           </ul>
+        </li>
+
+        <li class="nav-item">
+          <x-_locale lang="it"/>
+          <x-_locale lang="en"/>
+          <x-_locale lang="es"/>
+        </li>
+
           @auth
             @if (Auth::user()->is_revisor)
               <li class="nav-item">
