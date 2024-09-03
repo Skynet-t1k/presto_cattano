@@ -43,5 +43,6 @@ return
         'author' => 'Autore',
         'accept' => 'Accetta',
         'reject' => 'Rifiuta',
+        'photopreview' => 'Anteprima immagini',
 
     ];

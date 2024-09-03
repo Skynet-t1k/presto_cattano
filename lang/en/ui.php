@@ -43,4 +43,5 @@ return
         'author' => 'Author',
         'accept' => 'Accept',
         'reject' => 'Reject',
+        'photopreview' => 'Photo preview',
     ];
