@@ -17,7 +17,7 @@ return
         'libri & riviste' => 'libros y revistas',
         'accessori' => 'accesorios',
         'motori' => 'motores',
-        'videogames' => 'videojuegos',
+        'videogames' => 'Juegos de vídeo',
         'category' => 'Categorías',
         'details' => 'Detalles',
         'guest' => 'Invitado',
