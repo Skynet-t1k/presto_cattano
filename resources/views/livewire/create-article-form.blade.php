@@ -54,9 +54,9 @@
                 <div class="col-12">
                     <p>{{__('ui.photopreview')}}:</p>
                 </div>
-                <div class="row border border-4 border-success rounded shadow py-4">
+                <div class="row mx-auto border border-4 border-success rounded shadow py-4">
                     @foreach ($images as $key => $image)
-                        <div class="col d-flex flex-column align-items-center my-3">
+                        <div class="col-12 d-flex flex-column align-items-center my-3">
                             <div class="img-preview mx-auto shadow rounded"
                             style="background-image: url({{ $image->temporaryUrl() }});"></div>
                         </div>
@@ -66,7 +66,7 @@
                 </div>
             </div>
         @endif
-        <button type="submit" class="btn form-button w-100">{{__('ui.publish')}}</button>
+        <button type="submit" class="btn form-button w-100 mt-2">{{__('ui.publish')}}</button>
     </form>
 </div>
 
