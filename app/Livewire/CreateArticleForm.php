@@ -4,9 +4,11 @@ namespace App\Livewire;
 
 use App\Models\Article;
 use Livewire\Component;
+use App\Jobs\ResizeImage;
+use Livewire\WithFileUploads;
 use Livewire\Attributes\Validate;
 use Illuminate\Support\Facades\Auth;
-use Livewire\WithFileUploads;
+use Illuminate\Support\Facades\File;
 
 class CreateArticleForm extends Component
 {
@@ -34,11 +36,13 @@ class CreateArticleForm extends Component
             'category_id' => $this->category,
             'user_id' => Auth::id(),
         ]);
-
         if (count($this->images) > 0) {
             foreach ($this->images as $image) {
-                $this->article->images()->create(['path' => $image->store('images', 'public')]);
+                $newFileName = "articles/{$this->article->id}";
+                $newImage = $this->article->images()->create(['path' => $image->store($newFileName, 'piblic')]);
+                dispatch(new ResizeImage($newImage, 300, 300));
             }
+            File::deleteDirectory(storage_path('/app/livewire-tmp'));
         }
 
         session()->flash('success', 'Articolo creato correttamente');
