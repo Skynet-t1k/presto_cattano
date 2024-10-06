@@ -44,5 +44,6 @@ return
         'accept' => 'Aceptar',
         'reject' => 'Rechazar',
         'photopreview' => 'Vista previa de la foto',
+        'uploadimg' => 'cargar imágenes',
 
     ];

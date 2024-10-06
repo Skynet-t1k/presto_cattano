@@ -22,7 +22,7 @@ return
         'details' => 'Dettaglio',
         'guest' => 'Ospite',
         'login' => 'Accedi',
-        'register' => 'Regitrati',
+        'register' => 'Registrati',
         'revarea' => 'Area revisore',
         'artcateg' => 'Articoli della categoria',
         'noarticle' => 'Non sono stati creati articoli per questa categoria!',
@@ -44,5 +44,6 @@ return
         'accept' => 'Accetta',
         'reject' => 'Rifiuta',
         'photopreview' => 'Anteprima immagini',
+        'uploadimg' => 'Carica immagini',
 
     ];

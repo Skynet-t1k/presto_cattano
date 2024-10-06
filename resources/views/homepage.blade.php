@@ -1,13 +1,13 @@
 <x-layout>
 
 @if (session()->has('errorMessage'))
-    <div class="alert alert-danger text-center shadow rounded w-50">
+    <div class="alert alert-danger text-center shadow rounded w-50 mx-auto mt-3">
         {{session('errorMessage')}}
     </div>
 @endif
 
 @if (session()->has('message'))
-    <div class="alert alert-danger text-center shadow rounded w-50">
+    <div class="alert alert-success text-center shadow rounded w-50 mx-auto mt-3">
         {{session('message')}}
     </div>
 @endif

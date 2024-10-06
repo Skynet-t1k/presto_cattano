@@ -1,9 +1,9 @@
 <x-layout>
     <div class="container-fluid pt-5">
         <div class="row">
-            <div class="col-3">
+            <div class="col-12">
                 <div class="rounded shadow bg-body-secondary">
-                    <h1 class="display-5 text-center pb2">
+                    <h1 class="display-5 text-center mx-auto">
                         Revisor Dashboard
                     </h1>
                 </div>
@@ -83,14 +83,14 @@
                 <div class="row justify-content-center">
                     @for ($i = 0; $i < 6; $i++)
                     <div class="col-6 col-md-4 mb-4 text-center">
-                        <img src="https://picsum.photos/300" class="img-fluid rounded shadow" alt="immagine segnaposto">
+                        <img src="{{ asset('img/no-image.png') }}" class="img-fluid rounded shadow" alt="immagine segnaposto">
                     </div>
                     @endfor
                     @endif
                 </div>
             </div>
-            <div class="col-md-4 ps-4 d-flex flex-column justify-content-between">
-                <div>
+            <div class="col-md-4 ps-4 d-flex flex-column justify-content-between shadow-lg rounded revbox border">
+                <div class="h-100 d-flex flex-column justify-content-evenly">
                     <h1>{{__('ui.title')}}: {{$article_to_check->title}}</h1>
                     <h3>{{__('ui.author')}}: {{$article_to_check->user->name}}</h3>
                     <h4>{{__('ui.price')}}: {{$article_to_check->price}}</h4>
@@ -101,12 +101,12 @@
                     <form action="{{route('reject', ['article' => $article_to_check])}}" method="post">
                         @csrf
                         @method('PATCH')
-                        <button class="btn btn-danger py=2 px-5 fw-bold">{{__('ui.reject')}}</button>
+                        <button class="btn btn-danger py-2 px-5 fw-bold shadow">{{__('ui.reject')}}</button>
                     </form>
                     <form action="{{route('accept', ['article' => $article_to_check])}}" method="post">
                         @csrf
                         @method('PATCH')
-                        <button class="btn btn-success py=2 px-5 fw-bold">{{__('ui.accept')}}</button>
+                        <button class="btn btn-success py-2 px-5 fw-bold shadow">{{__('ui.accept')}}</button>
                     </form>
                 </div>
             </div>

@@ -29,7 +29,7 @@
                     @endif
                 </div>
                 @else
-                    <img src="https://picsum.photos/300" alt="Nessuna foto inserita dall'utente">
+                    <img src="{{asset('img/no-image.png')}}" alt="Nessuna foto inserita dall'utente" class="border rounded shadow-lg">
                 @endif
             </div>
             <div class="col-12 col-md-6 mb-3 height-custom text-center">

@@ -44,4 +44,5 @@ return
         'accept' => 'Accept',
         'reject' => 'Reject',
         'photopreview' => 'Photo preview',
+        'uploadimg' => 'Upload images',
     ];
