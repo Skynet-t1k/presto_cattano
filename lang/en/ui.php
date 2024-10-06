@@ -45,4 +45,5 @@ return
         'reject' => 'Reject',
         'photopreview' => 'Photo preview',
         'uploadimg' => 'Upload images',
+        'price' => 'price',
     ];

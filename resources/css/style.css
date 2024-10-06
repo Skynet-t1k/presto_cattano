@@ -16,6 +16,19 @@ footer {
     padding: 10px;
 }
 
+.height-custom{
+    height: 180px;
+}
+
+.position-custom-home{
+    position: relative;
+    top: -50px;
+}
+
+.position-custom-h1{
+    position: relative;
+    top:-20px
+}
 
 
 
@@ -80,8 +93,8 @@ footer {
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-    height: 120px;
-    width: 120px;
+    height: 320px;
+    width: 320px;
 }
 
 /* revisor dashboard */

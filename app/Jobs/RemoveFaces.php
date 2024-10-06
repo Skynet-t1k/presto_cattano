@@ -21,6 +21,7 @@ class RemoveFaces implements ShouldQueue
      * Create a new job instance.
      */
     private $article_image_id;
+
     public function __construct($article_image_id)
     {
         $this->article_image_id = $article_image_id;
@@ -29,7 +30,7 @@ class RemoveFaces implements ShouldQueue
     /**
      * Execute the job.
      */
-    public function handle(): void
+    public function handle()
     {
         $i = Image::find($this->article_image_id);
         if (!$i) {

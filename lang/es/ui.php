@@ -45,5 +45,6 @@ return
         'reject' => 'Rechazar',
         'photopreview' => 'Vista previa de la foto',
         'uploadimg' => 'cargar imágenes',
+        'price' => 'precio',
 
     ];
