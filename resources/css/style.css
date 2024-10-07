@@ -71,6 +71,19 @@ footer {
     width: 100%;
 }
 
+.login-w{
+    width: 160px;
+}
+
+.navbar-toggler{
+    background-color: white;
+    border: 3px solid orangered;
+}
+
+.dropdown-menu.show{
+    margin-top: 10px;
+}
+
 /* form */
 .glow-form .form-control:focus{
     box-shadow: 0px 0px 8px 5px #F78B08;
@@ -100,4 +113,17 @@ footer {
 /* revisor dashboard */
 .revbox{
     width: 500px;
+}
+
+
+@media screen and (max-width: 970px) {
+    .s-input{
+        width: auto;
+        flex-grow: 1;
+    }
+
+    .mt-custom-md{
+        margin-top: 10px;
+    }
+    
 }
