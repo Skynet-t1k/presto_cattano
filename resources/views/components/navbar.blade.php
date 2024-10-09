@@ -7,20 +7,19 @@
     </button>
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <ul class="navbar-nav mb-2 mb-lg-0 d-flex justify-content-around w100">
-        <li class="nav-item">
+        <li class="nav-item  nav-hover">
           <a class="nav-link" aria-current="page" href="{{route('article.create')}}">{{__('ui.addArticle')}}</a>
         </li>
-        <li class="nav-item">
+        <li class="nav-item  nav-hover">
           <a class="nav-link" aria-current="page" href="{{route('article.index')}}">{{__('ui.allArticles')}}</a>
         </li>
         
         <li class="nav-item dropdown d-flex">
-          <a class="nav-link dropdown-toggle border rounded-0 border-0 px-1"
+          <a class="nav-link categ dropdown-toggle border rounded-0 border-0 px-1"
              href="#"
              role="button" 
              data-bs-toggle="dropdown" 
-             aria-expanded="false"
-             style="width: 160px; flex-shrink: 0;">
+             aria-expanded="false">
              {{__('ui.category')}}
           </a>
           <ul class="dropdown-menu p-0 rounded-0 border-0">
@@ -33,7 +32,11 @@
           </ul>
           <form class="d-flex p-0 s-input" role="search" action="{{ route('article.search') }}" method="GET">
             <input class="form-control rounded-0 border-0 s-input" type="search" name="query" placeholder="Search" aria-label="Search">
-            <button class="btn s-btn border-0" style="width: 40px; flex-shrink: 0;" type="submit"><i class="fa-solid fa-magnifying-glass" style="color: #000000;"></i></button>
+            <button class="btn s-btn border-0"
+                    style="width: 40px; flex-shrink: 0;" 
+                    type="submit">
+                  <i class="fa-solid fa-magnifying-glass" style="color: #000000;"></i>
+            </button>
           </form>
         </li>
 

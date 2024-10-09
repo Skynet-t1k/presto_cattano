@@ -9,12 +9,27 @@ body {
 .content {
     flex: 1;
 }
+
+/* footer */
+
 footer {
     background-color: #333;
     color: white;
     text-align: center;
     padding: 10px;
 }
+
+.bg-btn-revisor{
+    background-color: #AFADAD ;
+    color: black;
+}
+
+.bg-btn-revisor:hover{
+    background-color: black ;
+    color: #AFADAD;
+}
+
+
 
 .height-custom{
     height: 180px;
@@ -72,7 +87,7 @@ footer {
 }
 
 .login-w{
-    width: 160px;
+    width: auto;
 }
 
 .navbar-toggler{
@@ -84,10 +99,21 @@ footer {
     margin-top: 10px;
 }
 
+.categ{
+    width: 170px;
+    flex-shrink: 0;
+}
+
 /* form */
 .glow-form .form-control:focus{
     box-shadow: 0px 0px 8px 5px #F78B08;
     background-color: #eceae2
+}
+
+.nav-hover:hover{
+    
+    background-color: rgb(175, 173, 173);
+    border-radius: 5px;
 }
 
 .form-w{
@@ -115,6 +141,17 @@ footer {
     width: 500px;
 }
 
+/* Card */
+.card-body{
+    background-color: #F9FAFB !important; 
+}
+
+.card:hover{
+    transform: scale(1.02);
+    transition: 0.4s;
+    z-index: 3;
+}
+
 
 @media screen and (max-width: 970px) {
     .s-input{
@@ -124,6 +161,11 @@ footer {
 
     .mt-custom-md{
         margin-top: 10px;
+    }
+
+    .categ{
+        width: auto;
+        
     }
     
 }
