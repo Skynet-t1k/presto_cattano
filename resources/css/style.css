@@ -10,6 +10,10 @@ body {
     flex: 1;
 }
 
+.height-h{
+    height: 400px;
+}
+
 /* footer */
 
 footer {
@@ -82,6 +86,12 @@ footer {
     font-size: 1.2rem;
 }
 
+.btn-revisor:hover{
+    color: black !important;
+    background-color: #AFADAD !important;
+    
+}
+
 .w100{
     width: 100%;
 }
@@ -92,7 +102,7 @@ footer {
 
 .navbar-toggler{
     background-color: white;
-    border: 3px solid orangered;
+    border: 3px solid #F78B08;
 }
 
 .dropdown-menu.show{
@@ -102,6 +112,10 @@ footer {
 .categ{
     width: 170px;
     flex-shrink: 0;
+}
+
+.smallrounded{
+    border-radius: 0px;
 }
 
 /* form */
@@ -167,5 +181,10 @@ footer {
         width: auto;
         
     }
-    
+
+    .smallrounded{
+        border-radius: 5px;
+    }
+
+
 }

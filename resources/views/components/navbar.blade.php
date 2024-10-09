@@ -14,7 +14,7 @@
           <a class="nav-link" aria-current="page" href="{{route('article.index')}}">{{__('ui.allArticles')}}</a>
         </li>
         
-        <li class="nav-item dropdown d-flex">
+        <li class="nav-item dropdown d-flex flex-column flex-md-row">
           <a class="nav-link categ dropdown-toggle border rounded-0 border-0 px-1"
              href="#"
              role="button" 
@@ -22,7 +22,7 @@
              aria-expanded="false">
              {{__('ui.category')}}
           </a>
-          <ul class="dropdown-menu p-0 rounded-0 border-0">
+          <ul class="dropdown-menu">
             @foreach($categories as $category)
                   <li><a class="dropdown-item text-capitalize" href=" {{route('byCategory', ['category' => $category])}}">{{__("ui.$category->name")}}</a></li>
               @if (!$loop->last)
@@ -31,7 +31,7 @@
             @endforeach
           </ul>
           <form class="d-flex p-0 s-input" role="search" action="{{ route('article.search') }}" method="GET">
-            <input class="form-control rounded-0 border-0 s-input" type="search" name="query" placeholder="Search" aria-label="Search">
+            <input class="form-control smallrounded border-0 s-input" type="search" name="query" placeholder="Search" aria-label="Search">
             <button class="btn s-btn border-0"
                     style="width: 40px; flex-shrink: 0;" 
                     type="submit">
@@ -75,7 +75,7 @@
           @auth
             @if (Auth::user()->is_revisor)
               <li class="nav-item mt-custom-md">
-                <a href="{{route('revisor.index')}}" class="nav-link btn dropdown login-w position-relative">
+                <a href="{{route('revisor.index')}}" class="nav-link btn btn-revisor dropdown login-w position-relative">
                   {{__('ui.revarea')}} 
                   <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">{{\App\Models\Article::toBeRevisedCount()}}</span>                  
                 </a>

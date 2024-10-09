@@ -1,7 +1,7 @@
 <x-layout>
 
-<div class="z-2 position-relative shadow container-fluid height-custom bg-gradient bg-light d-flex align-items-center justify-content-center">
-    <h1 class="position-custom-h1">Presto.it</h1>
+<div class="z-2 position-relative shadow container-fluid height-h bg-gradient bg-light d-flex align-items-center justify-content-center">
+    <img src="/img/presto_h.png" alt="presto.it" class="img-fluid position-custom-h1">
 </div>
 
 @if (session()->has('errorMessage'))
@@ -18,7 +18,7 @@
 
 
 <div class="container position-custom-home">
-<div class="row height-custom justify-content-center align-items-center pb-5 bg-white h-100">
+<div class="row justify-content-center align-items-center pb-5 bg-white h-100">
     @forelse ($articles as $article)
         <div class="col-12 col-md-4">
             <x-card :article="$article" />
